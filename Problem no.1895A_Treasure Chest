@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,j,z,i,a,b,c;
+    cin>>x;
+    for(j=1; j<=x; j++)
+    {
+        cin>>a>>b>>c;
+        if(a<b)
+        {
+            i=b-a;
+            if(c>=i)
+            {
+                y=a+i;
+            }
+            else
+            {
+                y=a+c;
+            }
+            if(b>=y)
+            {
+                z=b-y;
+            }
+            else
+            {
+                z=y-b;
+            }
+            y=y+2*z;
+        }
+        else
+        {
+            y=a;
+        }
+        cout<<y<<"\n";
+    }
+    return 0;
+}
