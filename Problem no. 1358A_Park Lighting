@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,z;
+    cin>>x;
+    for(i=1; i<=x; i++)
+    {
+        cin>>y>>z;
+        j=y*z;
+        if(j%2==0)
+        {
+            cout<<j/2<<"\n";
+        }
+        else
+        {
+            cout<<(j/2)+1<<"\n";
+        }
+    }
+    return 0;
+}
