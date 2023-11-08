@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,z,a,b,c;
+    cin>>a>>b>>c;
+    if(a%c!=0)
+    {
+        x=(a/c)+1;
+    }
+    else
+    {
+        x=(a/c);
+    }
+    if(b%c!=0)
+    {
+        y=(b/c)+1;
+    }
+    else
+    {
+        y=(b/c);
+    }
+    z=x*y;
+    cout<<z<<"\n";
+    return 0;
+}
