@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,a,b,c,i,k1=0,k2=0,k3=0;
+    cin>>x;
+    for(i=1;i<=x;i++)
+    {
+        cin>>a>>b>>c;
+        k1=k1+a;
+        k2=k2+b;
+        k3=k3+c;
+    }
+    if(k1==0&&k2==0&&k3==0)
+    {
+        cout<<"YES"<<"\n";
+    }
+    else
+    {
+        cout<<"NO"<<"\n";
+    }
+    return 0;
+}
