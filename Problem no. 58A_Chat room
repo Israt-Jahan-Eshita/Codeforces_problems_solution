@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,k=0,j=0;
+    string v="hello";
+    string s;
+    cin>>s;
+    y=s.length();
+    for(i=0; i<y; i++)
+    {
+        if(s[i]==v[j])
+        {
+            j++;
+            k++;
+        }
+    }
+    if(k!=5)
+    {
+        cout<<"NO"<<"\n";
+    }
+    else
+    {
+        cout<<"YES"<<"\n";
+    }
+    return 0;
+}
