@@ -1,0 +1,30 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int a,b,c,x=0,x1,x2,x3,x4;
+    cin>>a>>b>>c;
+    x1=a+b+c;
+    if(x1>x)
+    {
+        x=x1;
+    }
+    x2=a*b*c;
+    if(x2>x)
+    {
+        x=x2;
+    }
+    x3=(a+b)*c;
+    if(x3>x)
+    {
+        x=x3;
+    }
+    x4=(c+b)*a;
+    if(x4>x)
+    {
+        x=x4;
+    }
+    cout<<x<<"\n";
+    return 0;
+}
