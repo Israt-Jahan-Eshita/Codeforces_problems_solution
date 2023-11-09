@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x=0,y,i,z=0;
+    cin>>y;
+    vector<long long int>v(y);
+    for(i=0; i<y; i++)
+    {
+        cin>>v[i];
+    }
+    for(i=0; i<y-1; i++)
+    {
+        if(v[i]<=v[i+1])
+        {
+            x++;
+            if(x>z)
+            {
+                z=x;
+            }
+        }
+        else
+        {
+            x=0;
+        }
+    }
+    if(x!=y)
+        cout<<z+1<<"\n";
+    else
+        cout<<y<<"\n";
+    return 0;
+}
