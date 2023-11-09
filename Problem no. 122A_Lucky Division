@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i=0;
+    cin>>x;
+    if(x%4==0||x%7==0||x%44==0||x%47==0||x%77==0
+       ||x%74==0||x%444==0||x%447==0||x%474==0||x%477==0)
+    {
+        cout<<"YES"<<"\n";
+    }
+    else
+    {
+        while(x>0)
+        {
+            y=x%10;
+            if(y!=4&&y!=7)
+            {
+                i=1;
+                break;
+            }
+            x=x/10;
+        }
+        if(i==0)
+        {
+            cout<<"YES"<<"\n";
+        }
+        else
+        {
+            cout<<"NO"<<"\n";
+        }
+    }
+    return 0;
+}
