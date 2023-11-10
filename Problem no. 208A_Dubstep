@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,i,j;
+    string s;
+    cin>>s;
+    x=s.length();
+    for(i=0; i<x; i++)
+    {
+        if(s[i]=='W'&&s[i+1]=='U'&&s[i+2]=='B')
+        {
+            i=i+2;
+        }
+        else
+        {
+            cout<<s[i];
+            if(s[i+1]=='W'&&s[i+2]=='U'&&s[i+3]=='B')
+            {
+                cout<<" ";
+            }
+        }
+    }
+    return 0;
+}
