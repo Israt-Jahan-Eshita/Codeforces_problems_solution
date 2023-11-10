@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,a=0,b=0,i,z[500],y;
+    cin>>x;
+    for(i=1;i<=x;i++)
+    {
+        cin>>z[i];
+        if(z[i]%2==0)
+        {
+            a++;
+        }
+        else{
+            b++;
+        }
+    }
+    if(a==1)
+    {
+       for(i=1;i<=x;i++)
+       {
+           if(z[i]%2==0)
+           {
+               cout<<i<<"\n";
+               break;
+           }
+       }
+    }
+    else
+    {
+        for(i=1;i<=x;i++)
+       {
+           if(z[i]%2!=0)
+           {
+               cout<<i<<"\n";
+               break;
+           }
+       }
+    }
+    return 0;
+}
