@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,k=100000,z;
+    cin>>x>>y;
+    vector<long long int>v(y);
+    for(i=0;i<y;i++)
+    {
+        cin>>v[i];
+    }
+    sort(v.begin(),v.end());
+    for(i=0;i<=y-x;i++)
+    {
+        z=v[x-1+i]-v[i];
+        k=min(z,k);
+    }
+    cout<<k<<"\n";
+    return 0;
+}
