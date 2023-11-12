@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int a[1000000]= {0},i,j,x,k,y;
+    for(i=2; i<=1000000; i++)
+    {
+        for(j=2; i*j<=1000000; j++)
+        {
+            a[i*j]=1;
+        }
+    }
+    cin>>x;
+    for(i=0; i<x; i++)
+    {
+        cin>>y;
+        k=sqrt(y);
+        if(y==1)
+        {
+            cout<<"NO"<<"\n";
+        }
+        else if(k*k==y&&a[k]==0)
+        {
+            cout<<"YES"<<"\n";
+        }
+        else
+        {
+            cout<<"NO"<<"\n";
+        }
+    }
+    return 0;
+}
