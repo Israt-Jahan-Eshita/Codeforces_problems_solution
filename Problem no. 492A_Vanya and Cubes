@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int x,y,i,j=0,k=0,count1=0;
+    cin>>x;
+    for(i=1; i<=x; i++)
+    {
+        j=j+i;
+        k=k+j;
+        if(k<=x)
+        {
+            count1++;
+        }
+        else
+        {
+            break;
+        }
+    }
+    cout<<count1<<"\n";
+    return 0;
+}
