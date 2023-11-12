@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i;
+    double z=0,j,k;
+    cin>>x>>y;
+    vector<long long int>v(x);
+    for(i=0;i<x;i++)
+    {
+        cin>>v[i];
+    }
+    sort(v.begin(),v.end());
+    for(i=0;i<x-1;i++)
+    {
+        if(v[i+1]-v[i]>z)
+        {
+            z=v[i+1]-v[i];
+        }
+    }
+    j=v[0];
+    z=(double) z/2;
+    j=max(j,z);
+    k=y-v[x-1];
+    k=max(j,k);
+    cout<<fixed<<setprecision(10)<<k<<"\n";
+    return 0;
+}
