@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i=1,count1=0;
+    cin>>x>>y;
+    for(;;)
+    {
+        x=x-i;
+        if(x==0)
+        {
+            break;
+        }
+        y=y-i;
+        if(y==0)
+        {
+            break;
+        }
+        i=1;
+        count1++;
+    }
+    if(count1%2==0)
+    {
+        cout<<"Akshat"<<"\n";
+    }
+    else
+    {
+        cout<<"Malvika"<<"\n";
+    }
+    return 0;
+}
