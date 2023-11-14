@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,i,a,b,c,j;
+    string s;
+    cin>>x;
+    for(i=1;i<=x;i++)
+    {
+        cin>>s;
+        a=0;
+        b=0;
+        c=0;
+        for(j=0;j<s.size();j++)
+        {
+            if(s[j]=='A')
+            {
+                a++;
+            }
+            if(s[j]=='B')
+            {
+                b++;
+            }
+            if(s[j]=='C')
+            {
+                c++;
+            }
+        }
+        if(a+c==b)
+        {
+            cout<<"YES"<<"\n";
+        }
+        else
+        {
+            cout<<"NO"<<"\n";
+        }
+    }
+    return 0;
+}
