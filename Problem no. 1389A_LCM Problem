@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y=0,a,b,c,i,j,z,k;
+    cin>>x>>a>>b>>c;
+    for(i=0; a*i<=x; i++)
+    {
+        for(j=0; a*i+b*j<=x; j++)
+        {
+            z=x-(a*i+b*j);
+            if(z%c==0)
+            {
+                k=z/c;
+                y=max(y,(i+j+k));
+            }
+        }
+    }
+    cout<<y<<"\n";
+    return 0;
+}
