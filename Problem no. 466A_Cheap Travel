@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int a,b,c,d,x,y,i,z,k;
+    while(cin>>a>>b>>c>>d)
+    {
+        x=a*c;
+        if(a>b)
+        {
+            if(a%b>0)
+            {
+                z=(a/b)*d+d;
+            }
+            else
+            {
+                z=(a/b)*d;
+            }
+            y=(a/b)*d+(a%b)*c;
+            i=min(x,min(y,z));
+        }
+        else
+        {
+            i=min(x,d);
+        }
+        cout<<i<<"\n";
+    }
+    return 0;
+}
