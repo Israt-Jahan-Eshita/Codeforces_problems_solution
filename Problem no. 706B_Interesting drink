@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,k;
+    cin>>x;
+    vector<unsigned long long>a(x);
+    for(i=0;i<x;i++)
+    {
+        cin>>a[i];
+    }
+    sort(a.begin(),a.end());
+    cin>>y;
+    vector<unsigned long long>b(y);
+    for(j=0;j<y;j++)
+    {
+        cin>>b[j];
+        k=upper_bound(a.begin(),a.end(),b[j])-a.begin();
+        cout<<k<<"\n";
+    }
+    return 0;
+}
