@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,z,k,maxx=INT_MAX ,sum,m=0;
+    cin>>y>>z;
+    vector<long long int>v(y);
+    vector<long long int>a(y+1);
+    for(i=0; i<y; i++)
+    {
+        cin>>v[i];
+    }
+    for(i=1;i<y+1;i++)
+    {
+        a[i]=a[i-1]+v[i-1];
+    }
+    for(i=0; i<y-z+1; i++)
+    {
+        sum=a[i+z]-a[i];
+        if(sum<maxx)
+        {
+            maxx=sum;
+            m=i+1;
+        }
+    }
+    cout<<m<<"\n";
+    return 0;
+}
