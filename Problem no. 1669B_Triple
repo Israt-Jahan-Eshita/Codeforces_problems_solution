@@ -1,0 +1,43 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,z,i,j,k;
+    cin>>x;
+    for(i=0; i<x; i++)
+    {
+        cin>>y;
+        vector<long long int>v(y);
+        for(j=0; j<y; j++)
+        {
+            cin>>v[j];
+        }
+        sort(v.begin(),v.end());
+        k=1;
+        for(j=1; j<y; j++)
+        {
+            if(v[j]==v[j-1])
+            {
+                k++;
+                if(k==3)
+                {
+                    z=v[j];
+                    break;
+                }
+            }
+            else
+            {
+                k=1;
+            }
+        }
+        if(k!=3)
+        {
+            cout<<"-1"<<"\n";
+        }
+        else
+        {
+            cout<<z<<"\n";
+        }
+    }
+    return 0;
+}
