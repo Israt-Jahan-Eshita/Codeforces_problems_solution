@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j=0,k=0,z;
+    string s;
+    string s1;
+    string s2;
+    cin>>x;
+    for(i=0; i<x; i++)
+    {
+        cin>>s;
+        if(i==0)
+        {
+            s1=s;
+            j++;
+        }
+        else
+        {
+            if(s==s1)
+            {
+                j++;
+            }
+            else
+            {
+                s2=s;
+                k++;
+            }
+        }
+    }
+    z=max(j,k);
+    if(z==j)
+    {
+        cout<<s1<<"\n";
+    }
+    else
+    {
+        cout<<s2<<"\n";
+    }
+    return 0;
+}
