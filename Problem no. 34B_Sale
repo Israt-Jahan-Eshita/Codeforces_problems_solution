@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,k,sum=0;
+    cin>>x>>y;
+    vector<long long int>v(x);
+    vector<long long int>a;
+    for(i=0; i<x; i++)
+    {
+        cin>>v[i];
+        if(v[i]<0)
+        {
+            a.push_back(v[i]);
+        }
+    }
+    sort(a.begin(),a.end());
+    k=a.size();
+    for(j=0; j<k; j++)
+    {
+        sum+=a[j];
+        y--;
+        if(y==0)
+        {
+            break;
+        }
+    }
+    cout<<-sum<<"\n";
+    return 0;
+}
