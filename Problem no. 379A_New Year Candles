@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,z;
+    cin>>x>>y;
+    z=x;
+    while(x>=y)
+    {
+        z=z+(x/y);
+        x=(x/y)+(x%y);
+    }
+    cout<<z<<"\n";
+    return 0;
+}
