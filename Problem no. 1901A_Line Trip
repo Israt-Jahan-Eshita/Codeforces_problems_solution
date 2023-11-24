@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,k,z,maxx,a,b;
+    cin>>x;
+    for(i=0; i<x; i++)
+    {
+        cin>>y>>z;
+        vector<long long int>v(y);
+        for(j=0; j<y; j++)
+        {
+            cin>>v[j];
+        }
+        b=z*2;
+        maxx=0;
+        k=0;
+        if(b>v[y-1])
+        {
+            if(y==1)
+            {
+                k=v[y-1];
+                maxx=max(k,maxx);
+            }
+            else
+            {
+                for(j=0; j<y-1; j++)
+                {
+                    k=abs(v[j]-v[j+1]);
+                    maxx=max(k,maxx);
+                }
+                maxx=max(maxx,v[0]);
+            }
+            a=abs(z-v[y-1]);
+            a=a*2;
+            maxx=max(a,maxx);
+        }
+        else
+        {
+            maxx=b;
+        }
+        cout<<maxx<<"\n";
+    }
+    return 0;
+}
