@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,k;
+    cin>>y;
+    for(j=0; j<y; j++)
+    {
+        cin>>x;
+        vector<long long int>v(x);
+        for(i=0; i<x; i++)
+        {
+            cin>>v[i];
+        }
+        if(v[0]==1)
+        {
+            cout<<"YES"<<"\n";
+        }
+        else
+        {
+            cout<<"NO"<<"\n";
+        }
+    }
+    return 0;
+}
