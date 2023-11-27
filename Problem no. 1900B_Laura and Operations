@@ -1,0 +1,57 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,k,a,b,c,l,m;
+    cin>>x;
+    for(i=0;i<x;i++)
+    {
+        cin>>a>>b>>c;
+        k=a;
+        l=b;
+        m=c;
+        y=min(l,m);
+        k+=y;
+        l-=y;
+        m-=y;
+        if(max(l,m)%2==0)
+        {
+            cout<<"1"<<" ";
+        }
+        else
+        {
+            cout<<"0"<<" ";
+        }
+        k=b;
+        l=a;
+        m=c;
+        y=min(l,m);
+        k+=y;
+        l-=y;
+        m-=y;
+        if(max(l,m)%2==0)
+        {
+            cout<<"1"<<" ";
+        }
+        else
+        {
+            cout<<"0"<<" ";
+        }
+        k=c;
+        l=a;
+        m=b;
+        y=min(l,m);
+        k+=y;
+        l-=y;
+        m-=y;
+        if(max(l,m)%2==0)
+        {
+            cout<<"1"<<" "<<"\n";;
+        }
+        else
+        {
+            cout<<"0"<<" "<<"\n";
+        }
+    }
+    return 0;
+}
