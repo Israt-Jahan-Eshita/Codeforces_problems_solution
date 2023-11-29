@@ -1,0 +1,49 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j,k,count1;
+    cin>>x;
+    for(i=1; i<=x; i++)
+    {
+        cin>>y;
+        count1=0;
+        k=0;
+        while(y>1)
+        {
+            if(y%6!=0)
+            {
+                y=y*2;
+                if(y%6==0)
+                {
+                    count1=count1+2;;
+                    y=y/6;
+                }
+                else
+                {
+                    k=1;
+                    break;
+                }
+            }
+            else if(y/6==0)
+            {
+                k=1;
+                break;
+            }
+            else
+            {
+                y=y/6;
+                count1++;
+            }
+        }
+        if(k==1)
+        {
+            cout<<"-1"<<"\n";
+        }
+        else
+        {
+            cout<<count1<<"\n";
+        }
+    }
+    return 0;
+}
