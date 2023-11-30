@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,z,i,j,k;
+    cin>>x>>y;
+    if(x<y)
+    {
+        cout<<x<<"\n";
+    }
+    else
+    {
+        k=x;
+        z=0;
+        while(k!=0)
+        {
+            k=k/y;
+            if(z==k)
+            {
+                cout<<k+x<<"\n";
+                break;
+            }
+            else
+            {
+                z=k;
+                k=x+z;
+            }
+        }
+    }
+    return 0;
+}
