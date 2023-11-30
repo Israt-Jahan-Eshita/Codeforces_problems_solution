@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long int x,y,i,j;
+    cin>>x;
+    for(i=0;i<x;i++)
+    {
+        cin>>y;
+        j=(y/2020);
+        if(j<1)
+        {
+            cout<<"NO"<<"\n";
+        }
+        else
+        {
+            y=y%2020;
+            if(y>j)
+            {
+                cout<<"NO"<<"\n";
+            }
+            else
+            {
+                cout<<"YES"<<"\n";
+            }
+        }
+    }
+    return 0;
+}
